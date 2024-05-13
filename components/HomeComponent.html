@@ -174,6 +174,7 @@
                             <code>MatIconModule</code>
                             <code>CurrencyPipe</code>
                                 <code><a href="../components/CardComponent.html" target="_self" >CardComponent</a></code>
+                                <code><a href="../components/NewProductSectionComponent.html" target="_self" >NewProductSectionComponent</a></code>
                 </td>
             </tr>
 
@@ -220,6 +221,10 @@
                                     <span class="modifier">Public</span>
                                 <a href="#products" >products</a>
                             </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#showNewProduct" >showNewProduct</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -265,12 +270,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(homeService: <a href="../injectables/HomeService.html" target="_self">HomeService</a>)</code>
+<code>constructor(productsService: <a href="../injectables/ProductsService.html" target="_self">ProductsService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="94" class="link-to-prism">src/app/pages/home/home.component.ts:94</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="100" class="link-to-prism">src/app/pages/home/home.component.ts:100</a></div>
                             </td>
                         </tr>
 
@@ -291,10 +296,10 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>homeService</td>
+                                                        <td>productsService</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/HomeService.html" target="_self" >HomeService</a></code>
+                                                                        <code><a href="../injectables/ProductsService.html" target="_self" >ProductsService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -303,7 +308,7 @@
                                                     
                                                         <td>
                                                                 <ul>
-<li>Servicio de la página de inicio.</li>
+<li>Servicio de productos.</li>
 </ul>
 
                                                         </td>
@@ -348,8 +353,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="133"
-                                    class="link-to-prism">src/app/pages/home/home.component.ts:133</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="140"
+                                    class="link-to-prism">src/app/pages/home/home.component.ts:140</a></div>
                         </td>
                     </tr>
 
@@ -444,8 +449,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="112"
-                                    class="link-to-prism">src/app/pages/home/home.component.ts:112</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="118"
+                                    class="link-to-prism">src/app/pages/home/home.component.ts:118</a></div>
                         </td>
                     </tr>
 
@@ -485,8 +490,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="141"
-                                    class="link-to-prism">src/app/pages/home/home.component.ts:141</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="151"
+                                    class="link-to-prism">src/app/pages/home/home.component.ts:151</a></div>
                         </td>
                     </tr>
 
@@ -530,8 +535,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="105"
-                                    class="link-to-prism">src/app/pages/home/home.component.ts:105</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="111"
+                                    class="link-to-prism">src/app/pages/home/home.component.ts:111</a></div>
                         </td>
                     </tr>
 
@@ -632,7 +637,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/pages/home/home.component.ts:42</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/pages/home/home.component.ts:44</a></div>
                         </td>
                     </tr>
 
@@ -670,13 +675,51 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/pages/home/home.component.ts:38</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/pages/home/home.component.ts:40</a></div>
                         </td>
                     </tr>
 
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Lista de productos.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showNewProduct"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>showNewProduct</b></span>
+                        <a href="#showNewProduct"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="100" class="link-to-prism">src/app/pages/home/home.component.ts:100</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Indica si se muestra el producto nuevo.</p>
 </div>
                 </td>
             </tr>
@@ -698,8 +741,9 @@ import { MatIconModule } from &#x27;@angular/material/icon&#x27;;
 import { RouterModule } from &#x27;@angular/router&#x27;;
 import { CarouselModule, OwlOptions } from &#x27;ngx-owl-carousel-o&#x27;;
 import { CardComponent } from &#x27;../../components/card/card.component&#x27;;
+import { NewProductSectionComponent } from &#x27;../../components/new-product-section/new-product-section.component&#x27;;
 import { Product } from &#x27;../../interfaces/product.interface&#x27;;
-import { HomeService } from &#x27;../../services/home.service&#x27;;
+import { ProductsService } from &#x27;../../services/products.service&#x27;;
 
 /**
  * Componente que muestra la página de inicio de la aplicación.
@@ -718,6 +762,7 @@ import { HomeService } from &#x27;../../services/home.service&#x27;;
     MatIconModule,
     CurrencyPipe,
     CardComponent,
+    NewProductSectionComponent,
   ],
   templateUrl: &#x27;./home.component.html&#x27;,
   styleUrl: &#x27;./home.component.scss&#x27;,
@@ -783,12 +828,16 @@ export class HomeComponent implements OnInit {
     nav: true,
     navText: [&#x27;&lt;&#x27;, &#x27;&gt;&#x27;],
   };
+  /**
+   * Indica si se muestra el producto nuevo.
+   */
+  public showNewProduct: boolean &#x3D; false;
 
   /**
    * Constructor del componente.
-   * @param {HomeService} homeService - Servicio de la página de inicio.
+   * @param {ProductsService} productsService - Servicio de productos.
    */
-  constructor(private homeService: HomeService) {}
+  constructor(private productsService: ProductsService) {}
 
   /**
    * Inicialización del componente.
@@ -801,6 +850,7 @@ export class HomeComponent implements OnInit {
    * Obtiene los productos.
    */
   private getProducts(): void {
+    this.products &#x3D; [];
     const newProduct: Product &#x3D; {
       nameProduct: &#x27;&#x27;,
       numberProduct: &#x27;&#x27;,
@@ -808,7 +858,7 @@ export class HomeComponent implements OnInit {
       detaildProduct: &#x27;&#x27;,
       productType: &#x27;new&#x27;,
     };
-    this.homeService
+    this.productsService
       .getProducts()
       ?.subscribe((products: { listCard: Product[] }) &#x3D;&gt; {
         this.products &#x3D; products.listCard;
@@ -823,6 +873,9 @@ export class HomeComponent implements OnInit {
    */
   public cardChange($event: boolean, index: number): void {
     this.products[index].selected &#x3D; $event;
+    if(this.products[index].productType &#x3D;&#x3D;&#x3D; &#x27;new&#x27;) {
+      this.showNewProduct &#x3D; !this.showNewProduct;
+    }
   }
 
   /**
@@ -913,6 +966,7 @@ export class HomeComponent implements OnInit {
       &lt;/div&gt;
     &lt;/mat-card-content&gt;
   &lt;/mat-card&gt;
+  &lt;!-- Carousel section --&gt;
   &lt;div
     class&#x3D;&quot;objetives-section default-column gap-20 align-center justify-center&quot;
   &gt;
@@ -957,6 +1011,10 @@ export class HomeComponent implements OnInit {
     &lt;/div&gt;
     &lt;!-- END Associate Button --&gt;
   &lt;/div&gt;
+  &lt;!-- END Carousel section --&gt;
+  &lt;!-- New product section --&gt;
+  &lt;app-new-product-section *ngIf&#x3D;&quot;showNewProduct&quot;&gt;&lt;/app-new-product-section&gt;
+  &lt;!-- END New product section --&gt;
 &lt;/div&gt;
 </code></pre>
     </div>
@@ -987,8 +1045,8 @@ export class HomeComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="w100 default-column gap-20 bg-home">  <div class="w100 default-column bg-banner">    <div class="banner default-column justify-center align-center gap-20">      <div class="w100">        <a [routerLink]="[\'/home\']" class="default-row gap-5 breadcrumb">          <img            class="icon-img"            src="/assets/imgs/svgs/home-2.svg"            alt="Inicio"            title="Inicio"          />          Ir al inicio        </a>      </div>      <div        class="default-column justify-center align-center gap-10 title-description"      >        <h1 class="title">¡Tu objetivo ha sido agregado exitosamente!</h1>        <p class="description">          ¡Te hemos enviado un correo con la notificación.        </p>      </div>    </div>  </div>  <mat-card class="objetive-card">    <mat-card-content>      <div class="default-column gap-20 justify-start card-content">        <!-- Objetive and review -->        <div          class="default-row lt-sm-column justify-space-between align-start gap-10"        >          <div class="default-column gap-5">            <h2 class="objetive">Conocer mi sobrino</h2>            <p class="objetive-category">Categoría: Bienestar</p>          </div>          <div class="default-column gap-10">            <a href="#" class="review-objetive"> Revisar objetivo </a>          </div>        </div>        <!-- END Objetive and review -->        <!-- Objetive details -->        <div          class="default-row gap-20 lt-sm-column justify-space-evenly align-center"        >          <div class="default-column align-center gap-10 objetive-detail">            <div class="label">En esta fecha:</div>            <div class="value date">Diciembre/2022</div>          </div>          <div class="default-column align-center gap-10 objetive-detail">            <div class="label">Lograrás:</div>            <div class="value goal">              {{ 6000000 | currency : "USD" : "symbol" : "1.0-0" }}            </div>          </div>          <div class="default-column align-center gap-10 objetive-detail">            <div class="label">              <img src="/assets/imgs/svgs/Icon awesome-star.svg" />              Ya cuentas con:            </div>            <div class="value progress">              {{ 0 | currency : "USD" : "symbol" : "1.0-0" }}            </div>          </div>        </div>        <!-- END Objetive details -->        <!-- Auxiliar Link -->        <div class="default-row gap-10">          <a href="#" class="default-row lt-sm-column gap-5 align-center">            <mat-icon>check_circle</mat-icon>            ¡Asocia productos para monitorear su progreso!          </a>        </div>        <!-- END Auxiliar Link -->      </div>    </mat-card-content>  </mat-card>  <div    class="objetives-section default-column gap-20 align-center justify-center"  >    <!-- Text Section -->    <h2>      ¡Vamos por esos      <span class="important-text">        {{ 6000000 | currency : "USD" : "symbol" : "1.0-0" }}      </span>      para <span class="important-text">Conocer mi sobrino</span>!    </h2>    <div class="default-column gap-5 align-center justify-center">      <p>        ¡A través de tus productos y nuestros rendimientos podremos lograrlo!      </p>      <div class="default-row gap-5 align-center justify-center lt-sm-column">        <strong> Asocia tus productos o adquiere uno nuevo. </strong>        <img src="/assets/imgs/svgs/question.svg" alt="Ayuda" title="Ayuda" />      </div>    </div>    <!-- END Text Section -->    <!-- Products -->    <div class="w100 default-row gap-20 align-center">      <owl-carousel-o [options]="customOptions" class="w100">        <ng-template          carouselSlide          class="w100"          *ngFor="let product of products; let i = index"          [id]="product.balanceProduct"        >          <app-card [data]="product" (change)="cardChange($event, i)">          </app-card>        </ng-template>      </owl-carousel-o>    </div>    <!-- END Products -->    <!-- Associate Button -->    <div class="default-row justify-center align-center">      <button class="primary-button" [disabled]="isAsociarButtonDisabled()">        Asociar a objetivo      </button>    </div>    <!-- END Associate Button -->  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NotFound404Component', 'selector': 'app-not-found-404'}];
+        var COMPONENT_TEMPLATE = '<div><div class="w100 default-column gap-20 bg-home">  <div class="w100 default-column bg-banner">    <div class="banner default-column justify-center align-center gap-20">      <div class="w100">        <a [routerLink]="[\'/home\']" class="default-row gap-5 breadcrumb">          <img            class="icon-img"            src="/assets/imgs/svgs/home-2.svg"            alt="Inicio"            title="Inicio"          />          Ir al inicio        </a>      </div>      <div        class="default-column justify-center align-center gap-10 title-description"      >        <h1 class="title">¡Tu objetivo ha sido agregado exitosamente!</h1>        <p class="description">          ¡Te hemos enviado un correo con la notificación.        </p>      </div>    </div>  </div>  <mat-card class="objetive-card">    <mat-card-content>      <div class="default-column gap-20 justify-start card-content">        <!-- Objetive and review -->        <div          class="default-row lt-sm-column justify-space-between align-start gap-10"        >          <div class="default-column gap-5">            <h2 class="objetive">Conocer mi sobrino</h2>            <p class="objetive-category">Categoría: Bienestar</p>          </div>          <div class="default-column gap-10">            <a href="#" class="review-objetive"> Revisar objetivo </a>          </div>        </div>        <!-- END Objetive and review -->        <!-- Objetive details -->        <div          class="default-row gap-20 lt-sm-column justify-space-evenly align-center"        >          <div class="default-column align-center gap-10 objetive-detail">            <div class="label">En esta fecha:</div>            <div class="value date">Diciembre/2022</div>          </div>          <div class="default-column align-center gap-10 objetive-detail">            <div class="label">Lograrás:</div>            <div class="value goal">              {{ 6000000 | currency : "USD" : "symbol" : "1.0-0" }}            </div>          </div>          <div class="default-column align-center gap-10 objetive-detail">            <div class="label">              <img src="/assets/imgs/svgs/Icon awesome-star.svg" />              Ya cuentas con:            </div>            <div class="value progress">              {{ 0 | currency : "USD" : "symbol" : "1.0-0" }}            </div>          </div>        </div>        <!-- END Objetive details -->        <!-- Auxiliar Link -->        <div class="default-row gap-10">          <a href="#" class="default-row lt-sm-column gap-5 align-center">            <mat-icon>check_circle</mat-icon>            ¡Asocia productos para monitorear su progreso!          </a>        </div>        <!-- END Auxiliar Link -->      </div>    </mat-card-content>  </mat-card>  <!-- Carousel section -->  <div    class="objetives-section default-column gap-20 align-center justify-center"  >    <!-- Text Section -->    <h2>      ¡Vamos por esos      <span class="important-text">        {{ 6000000 | currency : "USD" : "symbol" : "1.0-0" }}      </span>      para <span class="important-text">Conocer mi sobrino</span>!    </h2>    <div class="default-column gap-5 align-center justify-center">      <p>        ¡A través de tus productos y nuestros rendimientos podremos lograrlo!      </p>      <div class="default-row gap-5 align-center justify-center lt-sm-column">        <strong> Asocia tus productos o adquiere uno nuevo. </strong>        <img src="/assets/imgs/svgs/question.svg" alt="Ayuda" title="Ayuda" />      </div>    </div>    <!-- END Text Section -->    <!-- Products -->    <div class="w100 default-row gap-20 align-center">      <owl-carousel-o [options]="customOptions" class="w100">        <ng-template          carouselSlide          class="w100"          *ngFor="let product of products; let i = index"          [id]="product.balanceProduct"        >          <app-card [data]="product" (change)="cardChange($event, i)">          </app-card>        </ng-template>      </owl-carousel-o>    </div>    <!-- END Products -->    <!-- Associate Button -->    <div class="default-row justify-center align-center">      <button class="primary-button" [disabled]="isAsociarButtonDisabled()">        Asociar a objetivo      </button>    </div>    <!-- END Associate Button -->  </div>  <!-- END Carousel section -->  <!-- New product section -->  <app-new-product-section *ngIf="showNewProduct"></app-new-product-section>  <!-- END New product section --></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'CardWithImageComponent', 'selector': 'app-card-with-image'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NewProductSectionComponent', 'selector': 'app-new-product-section'},{'name': 'NotFound404Component', 'selector': 'app-not-found-404'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HomeComponent'};
 </script>

@@ -87,7 +87,7 @@
   <li class="breadcrumb-item">Components</li>
   <li class="breadcrumb-item"
   >
-  AppComponent</li>
+  NewProductSectionComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -114,7 +114,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/app.component.ts</code>
+    <code>src/app/components/new-product-section/new-product-section.component.ts</code>
 </p>
 
 
@@ -122,7 +122,7 @@
         <h3>Description</h3>
     </p>
     <p class="comment">
-        <p>Componente principal de la aplicación.</p>
+        <p>Componente que muestra la sección de productos nuevos.</p>
 
     </p>
 
@@ -153,7 +153,7 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-root</code></td>
+                <td class="col-md-9"><code>app-new-product-section</code></td>
             </tr>
 
             <tr>
@@ -164,10 +164,9 @@
             <tr>
                 <td class="col-md-3">imports</td>
                 <td class="col-md-9">
-                            <code>RouterOutlet</code>
-                            <code>RouterModule</code>
-                                <code><a href="../components/NavbarComponent.html" target="_self" >NavbarComponent</a></code>
-                                <code><a href="../components/FooterComponent.html" target="_self" >FooterComponent</a></code>
+                            <code>CommonModule</code>
+                            <code>CarouselModule</code>
+                                <code><a href="../components/CardWithImageComponent.html" target="_self" >CardWithImageComponent</a></code>
                 </td>
             </tr>
 
@@ -176,14 +175,14 @@
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./app.component.html</code></td>
+                <td class="col-md-9"><code>./new-product-section.component.html</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">styleUrl</td>
-                <td class="col-md-9"><code>./app.component.scss</code></td>
+                <td class="col-md-9"><code>./new-product-section.component.scss</code></td>
             </tr>
 
 
@@ -207,8 +206,12 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                    <span class="modifier"></span>
-                                <a href="#className" >className</a>
+                                    <span class="modifier">Public</span>
+                                <a href="#customOptions" >customOptions</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#newProducts" >newProducts</a>
                             </li>
                         </ul>
                     </td>
@@ -223,6 +226,10 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getNewProducts" >getNewProducts</a>
+                            </li>
+                            <li>
                                 <a href="#ngOnInit" >ngOnInit</a>
                             </li>
                         </ul>
@@ -231,20 +238,6 @@
 
 
 
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>HostBindings</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                <a href="#class" >class</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
 
 
         </tbody>
@@ -257,12 +250,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(globalConfigService: <a href="../injectables/GlobalConfigService.html" target="_self">GlobalConfigService</a>)</code>
+<code>constructor(productsService: <a href="../injectables/ProductsService.html" target="_self">ProductsService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/app.component.ts:21</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/components/new-product-section/new-product-section.component.ts:43</a></div>
                             </td>
                         </tr>
 
@@ -278,20 +271,27 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>globalConfigService</td>
+                                                        <td>productsService</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/GlobalConfigService.html" target="_self" >GlobalConfigService</a></code>
+                                                                        <code><a href="../injectables/ProductsService.html" target="_self" >ProductsService</a></code>
                                                         </td>
                                                   
                                                     <td>
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <ul>
+<li>Servicio de productos.</li>
+</ul>
+
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -304,45 +304,6 @@
 
 
 
-    <section data-compodoc="block-properties">
-    <h3>HostBindings</h3>    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="class"></a>
-                    <span class="name">
-                        <span ><b>class</b></span>
-                        <a href="#class"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>&#x27;&#x27;</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/app.component.ts:21</a></div>
-                        </td>
-                    </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>HostBinding para aplicar modo oscuro.</p>
-</div>
-                </td>
-            </tr>
-
-        </tbody>
-    </table>
-</section>
 
 
     <section data-compodoc="block-methods">
@@ -350,6 +311,47 @@
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getNewProducts"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getNewProducts</b></span>
+                        <a href="#getNewProducts"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getNewProducts()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="61"
+                                    class="link-to-prism">src/app/components/new-product-section/new-product-section.component.ts:61</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Obtiene los productos nuevos.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -370,15 +372,15 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="32"
-                                    class="link-to-prism">src/app/app.component.ts:32</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="54"
+                                    class="link-to-prism">src/app/components/new-product-section/new-product-section.component.ts:54</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                        <div class="io-description"><p>Inicialización del componente.</p>
+                        <div class="io-description"><p>Inicializa el componente.</p>
 </div>
 
                         <div class="io-description">
@@ -399,43 +401,89 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="className"></a>
+                    <a name="customOptions"></a>
                     <span class="name">
-                            <span class="modifier"></span>
-                        <span ><b>className</b></span>
-                        <a href="#className"><span class="icon ion-ios-link"></span></a>
+                            <span class="modifier">Public</span>
+                        <span ><b>customOptions</b></span>
+                        <a href="#customOptions"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                        <i>Type : </i>    <code>OwlOptions</code>
 
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>&#x27;&#x27;</code>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <b>Decorators : </b>
-                        <br />
-                        <code>
-                            @HostBinding(&#x27;class&#x27;)<br />
-                        </code>
+                        <i>Default value : </i><code>{
+    loop: true,
+    dots: false,
+    fluidSpeed: true,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      1800: {
+        items: 1,
+      },
+    },
+    nav: true,
+    navText: [&#x27;&lt;&#x27;, &#x27;&gt;&#x27;],
+  }</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/app.component.ts:21</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/components/new-product-section/new-product-section.component.ts:22</a></div>
                         </td>
                     </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>HostBinding para aplicar modo oscuro.</p>
+                    <div class="io-description"><p>Opciones personalizadas del carrusel.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="newProducts"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>newProducts</b></span>
+                        <a href="#newProducts"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>NewProductCardInfo[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/components/new-product-section/new-product-section.component.ts:43</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Lista de productos nuevos.</p>
 </div>
                 </td>
             </tr>
@@ -448,40 +496,70 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, HostBinding, OnInit } from &#x27;@angular/core&#x27;;
-import { RouterModule, RouterOutlet } from &#x27;@angular/router&#x27;;
-import { FooterComponent } from &#x27;./layout/footer/footer.component&#x27;;
-import { NavbarComponent } from &#x27;./layout/navbar/navbar.component&#x27;;
-import { GlobalConfigService } from &#x27;./services/config.service&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { CommonModule } from &#x27;@angular/common&#x27;;
+import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { CarouselModule, OwlOptions } from &#x27;ngx-owl-carousel-o&#x27;;
+import { NewProductCardInfo } from &#x27;../../interfaces/product.interface&#x27;;
+import { ProductsService } from &#x27;../../services/products.service&#x27;;
+import { CardWithImageComponent } from &#x27;../card-with-image/card-with-image.component&#x27;;
 
 /**
- * Componente principal de la aplicación.
+ * Componente que muestra la sección de productos nuevos.
  */
 @Component({
-  selector: &#x27;app-root&#x27;,
+  selector: &#x27;app-new-product-section&#x27;,
   standalone: true,
-  imports: [RouterOutlet, RouterModule, NavbarComponent, FooterComponent],
-  templateUrl: &#x27;./app.component.html&#x27;,
-  styleUrl: &#x27;./app.component.scss&#x27;,
+  imports: [CommonModule, CarouselModule, CardWithImageComponent],
+  templateUrl: &#x27;./new-product-section.component.html&#x27;,
+  styleUrl: &#x27;./new-product-section.component.scss&#x27;,
 })
-export class AppComponent implements OnInit {
+export class NewProductSectionComponent implements OnInit {
   /**
-   * HostBinding para aplicar modo oscuro.
+   * Opciones personalizadas del carrusel.
    */
-  @HostBinding(&#x27;class&#x27;) className &#x3D; &#x27;&#x27;;
+  public customOptions: OwlOptions &#x3D; {
+    loop: true,
+    dots: false,
+    fluidSpeed: true,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      1800: {
+        items: 1,
+      },
+    },
+    nav: true,
+    navText: [&#x27;&lt;&#x27;, &#x27;&gt;&#x27;],
+  };
+  /**
+   * Lista de productos nuevos.
+   */
+  public newProducts: NewProductCardInfo[] &#x3D; [];
 
   /**
    * Constructor del componente.
-   * @param productsService - Servicio de la página de inicio
+   * @param productsService - Servicio de productos.
    */
-  constructor(private globalConfigService: GlobalConfigService) {}
+  constructor(private productsService: ProductsService) {}
 
   /**
-   * Inicialización del componente.
+   * Inicializa el componente.
    */
   ngOnInit(): void {
-    this.globalConfigService.darkMode.subscribe((darkMode) &#x3D;&gt; {
-      this.className &#x3D; darkMode;
+    this.getNewProducts();
+  }
+
+  /**
+   * Obtiene los productos nuevos.
+   */
+  private getNewProducts(): void {
+    this.newProducts &#x3D; [];
+    this.productsService.getNewProducts().subscribe((newProducts) &#x3D;&gt; {
+      this.newProducts &#x3D; newProducts;
     });
   }
 }
@@ -489,10 +567,35 @@ export class AppComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;app-navbar&gt;
-  &lt;router-outlet&gt;&lt;/router-outlet&gt;
-&lt;/app-navbar&gt;
-&lt;app-footer&gt;&lt;/app-footer&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;new-product&quot;&gt;
+  &lt;div class&#x3D;&quot;new-card default-row gap-20 justify-space-between lt-md-column&quot;&gt;
+    &lt;div
+      class&#x3D;&quot;w100 default-column gap-20 flex-5 leff-section&quot;
+    &gt;
+      &lt;div class&#x3D;&quot;default-row justify-start&quot;&gt;
+        &lt;div class&#x3D;&quot;recommended-label&quot;&gt;Producto recomendado&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;flex-1 w100 default-column justify-start align-center&quot;&gt;
+        &lt;h1 class&#x3D;&quot;we-recommend&quot;&gt;
+          ¡Te recomendamos estos productos para
+          &lt;span class&#x3D;&quot;important-text&quot;&gt;Conocer sobrino&lt;/span&gt;!
+        &lt;/h1&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style&#x3D;&quot;width: 360px&quot;&gt;
+      &lt;owl-carousel-o [options]&#x3D;&quot;customOptions&quot;&gt;
+        &lt;ng-template
+          carouselSlide
+          class&#x3D;&quot;w100&quot;
+          *ngFor&#x3D;&quot;let product of newProducts; let i &#x3D; index&quot;
+          [id]&#x3D;&quot;product.code&quot;
+        &gt;
+          &lt;app-card-with-image [data]&#x3D;&quot;product&quot;&gt;&lt;/app-card-with-image&gt;
+        &lt;/ng-template&gt;
+      &lt;/owl-carousel-o&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
     </div>
 
@@ -522,10 +625,10 @@ export class AppComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><app-navbar>  <router-outlet></router-outlet></app-navbar><app-footer></app-footer></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="new-product">  <div class="new-card default-row gap-20 justify-space-between lt-md-column">    <div      class="w100 default-column gap-20 flex-5 leff-section"    >      <div class="default-row justify-start">        <div class="recommended-label">Producto recomendado</div>      </div>      <div class="flex-1 w100 default-column justify-start align-center">        <h1 class="we-recommend">          ¡Te recomendamos estos productos para          <span class="important-text">Conocer sobrino</span>!        </h1>      </div>    </div>    <div style="width: 360px">      <owl-carousel-o [options]="customOptions">        <ng-template          carouselSlide          class="w100"          *ngFor="let product of newProducts; let i = index"          [id]="product.code"        >          <app-card-with-image [data]="product"></app-card-with-image>        </ng-template>      </owl-carousel-o>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'CardWithImageComponent', 'selector': 'app-card-with-image'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NewProductSectionComponent', 'selector': 'app-new-product-section'},{'name': 'NotFound404Component', 'selector': 'app-not-found-404'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'AppComponent'};
+    var ACTUAL_COMPONENT = {'name': 'NewProductSectionComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -571,7 +674,7 @@ export class AppComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'NewProductSectionComponent.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
