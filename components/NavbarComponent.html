@@ -1,0 +1,1244 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>skandia documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avaoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">skandia documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  NavbarComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/layout/navbar/navbar.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Componente que muestra la barra de navegación de la aplicación.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-navbar</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">standalone</td>
+                <td class="col-md-9"><code>true</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">imports</td>
+                <td class="col-md-9">
+                            <code>CommonModule</code>
+                            <code>FormsModule</code>
+                            <code>ReactiveFormsModule</code>
+                            <code>MatToolbarModule</code>
+                            <code>MatIconModule</code>
+                            <code>MatButtonModule</code>
+                            <code>MatDividerModule</code>
+                            <code>MatSidenavModule</code>
+                            <code>MatListModule</code>
+                            <code>MatMenuModule</code>
+                            <code>MatSlideToggleModule</code>
+                            <code>RouterModule</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./navbar.component.html</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrl</td>
+                <td class="col-md-9"><code>./navbar.component.scss</code></td>
+            </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#breakpointObserver" >breakpointObserver</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#menuItems" >menuItems</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#selectedMenuItem" >selectedMenuItem</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#sidenavExpanded" >sidenavExpanded</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#sizeDisplay" >sizeDisplay</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#toggleDarkTheme" >toggleDarkTheme</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getMenuItems" >getMenuItems</a>
+                            </li>
+                            <li>
+                                <a href="#mediaQuery" >mediaQuery</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#navigateTo" >navigateTo</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(router: Router, globalConfigService: <a href="../injectables/GlobalConfigService.html" target="_self">GlobalConfigService</a>, breakpointObserver: BreakpointObserver)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/app/layout/navbar/navbar.component.ts:68</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor del componente.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code>Router</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Servicio de enrutamiento</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>globalConfigService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/GlobalConfigService.html" target="_self" >GlobalConfigService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Servicio de configuración global</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>breakpointObserver</td>
+                                                  
+                                                        <td>
+                                                                    <code>BreakpointObserver</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Observador de cambios en el tamaño de la pantalla</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMenuItems"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getMenuItems</b></span>
+                        <a href="#getMenuItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getMenuItems()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="109"
+                                    class="link-to-prism">src/app/layout/navbar/navbar.component.ts:109</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Obtiene los items del menú.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mediaQuery"></a>
+                    <span class="name">
+                        <span ><b>mediaQuery</b></span>
+                        <a href="#mediaQuery"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>mediaQuery()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="87"
+                                    class="link-to-prism">src/app/layout/navbar/navbar.component.ts:87</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Verifica el tamaño de la pantalla.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="navigateTo"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>navigateTo</b></span>
+                        <a href="#navigateTo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>navigateTo(menuItem: <a href="../interfaces/MenuItem.html" target="_self">MenuItem</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="155"
+                                    class="link-to-prism">src/app/layout/navbar/navbar.component.ts:155</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Navega a la ruta del item del menú.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>menuItem</td>
+                                            <td>
+                                                            <code><a href="../interfaces/MenuItem.html" target="_self" >MenuItem</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>Item del menú</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="98"
+                                    class="link-to-prism">src/app/layout/navbar/navbar.component.ts:98</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Inicialización del componente.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="breakpointObserver"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>breakpointObserver</b></span>
+                        <a href="#breakpointObserver"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>BreakpointObserver</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="79" class="link-to-prism">src/app/layout/navbar/navbar.component.ts:79</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description">- Observador de cambios en el tamaño de la pantalla</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="menuItems"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>menuItems</b></span>
+                        <a href="#menuItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/MenuItem.html" target="_self" >MenuItem[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/layout/navbar/navbar.component.ts:56</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Items del menú.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedMenuItem"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>selectedMenuItem</b></span>
+                        <a href="#selectedMenuItem"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/MenuItem.html" target="_self" >MenuItem | null</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/layout/navbar/navbar.component.ts:60</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Item seleccionado del menú.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sidenavExpanded"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>sidenavExpanded</b></span>
+                        <a href="#sidenavExpanded"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/layout/navbar/navbar.component.ts:52</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Indica si el menú lateral está expandido.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sizeDisplay"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>sizeDisplay</b></span>
+                        <a href="#sizeDisplay"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>&quot;phone&quot; | &quot;web&quot;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;web&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/app/layout/navbar/navbar.component.ts:68</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Tamaño de la pantalla.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggleDarkTheme"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>toggleDarkTheme</b></span>
+                        <a href="#toggleDarkTheme"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>UntypedFormControl</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new UntypedFormControl(false)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/layout/navbar/navbar.component.ts:64</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Indica si se activa el tema oscuro.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  BreakpointObserver,
+  BreakpointState,
+  Breakpoints,
+} from &#x27;@angular/cdk/layout&#x27;;
+import { CommonModule } from &#x27;@angular/common&#x27;;
+import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import {
+  FormsModule,
+  ReactiveFormsModule,
+  UntypedFormControl,
+} from &#x27;@angular/forms&#x27;;
+import { MatButtonModule } from &#x27;@angular/material/button&#x27;;
+import { MatDividerModule } from &#x27;@angular/material/divider&#x27;;
+import { MatIconModule } from &#x27;@angular/material/icon&#x27;;
+import { MatListModule } from &#x27;@angular/material/list&#x27;;
+import { MatMenuModule } from &#x27;@angular/material/menu&#x27;;
+import { MatSidenavModule } from &#x27;@angular/material/sidenav&#x27;;
+import { MatSlideToggleModule } from &#x27;@angular/material/slide-toggle&#x27;;
+import { MatToolbarModule } from &#x27;@angular/material/toolbar&#x27;;
+import { Router, RouterModule } from &#x27;@angular/router&#x27;;
+import { MenuItem } from &#x27;../../interfaces/navbar.interface&#x27;;
+import { GlobalConfigService } from &#x27;../../services/config.service&#x27;;
+
+/**
+ * Componente que muestra la barra de navegación de la aplicación.
+ */
+@Component({
+  selector: &#x27;app-navbar&#x27;,
+  standalone: true,
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatDividerModule,
+    MatSidenavModule,
+    MatListModule,
+    MatMenuModule,
+    MatSlideToggleModule,
+    RouterModule,
+  ],
+  templateUrl: &#x27;./navbar.component.html&#x27;,
+  styleUrl: &#x27;./navbar.component.scss&#x27;,
+})
+export class NavbarComponent implements OnInit {
+  /**
+   * Indica si el menú lateral está expandido.
+   */
+  public sidenavExpanded: boolean &#x3D; false;
+  /**
+   * Items del menú.
+   */
+  public menuItems: MenuItem[] &#x3D; [];
+  /**
+   * Item seleccionado del menú.
+   */
+  public selectedMenuItem: MenuItem | null &#x3D; null;
+  /**
+   * Indica si se activa el tema oscuro.
+   */
+  public toggleDarkTheme: UntypedFormControl &#x3D; new UntypedFormControl(false);
+  /**
+   * Tamaño de la pantalla.
+   */
+  public sizeDisplay: &#x27;phone&#x27; | &#x27;web&#x27; &#x3D; &#x27;web&#x27;;
+
+  /**
+   * Constructor del componente.
+   * @param {Router} router - Servicio de enrutamiento
+   * @param {GlobalConfigService} globalConfigService - Servicio de configuración global
+   * @param {BreakpointObserver} breakpointObserver - Observador de cambios en el tamaño de la pantalla
+   */
+  constructor(
+    private router: Router,
+    private globalConfigService: GlobalConfigService,
+    public breakpointObserver: BreakpointObserver
+  ) {
+    this.mediaQuery();
+  }
+
+  /**
+   * Verifica el tamaño de la pantalla.
+   */
+  mediaQuery() {
+    this.breakpointObserver
+      .observe([Breakpoints.Small, Breakpoints.XSmall])
+      .subscribe((result: BreakpointState) &#x3D;&gt; {
+        this.sizeDisplay &#x3D; result.matches ? &#x27;phone&#x27; : &#x27;web&#x27;;
+      });
+  }
+
+  /**
+   * Inicialización del componente.
+   */
+  ngOnInit(): void {
+    this.getMenuItems();
+    this.toggleDarkTheme.valueChanges.subscribe((darkMode) &#x3D;&gt; {
+      const darkClassName &#x3D; &#x27;darkMode&#x27;;
+      this.globalConfigService.darkMode.next(darkMode ? darkClassName : &#x27;&#x27;);
+    });
+  }
+
+  /**
+   * Obtiene los items del menú.
+   */
+  private getMenuItems(): void {
+    this.menuItems &#x3D; [
+      {
+        id: 1,
+        title: &#x27;Inicio&#x27;,
+        iconUrl: &#x27;/assets/imgs/svgs/home.svg&#x27;,
+        route: &#x27;/home&#x27;,
+      },
+      {
+        id: 2,
+        title: &#x27;Contratos&#x27;,
+        iconUrl: &#x27;/assets/imgs/svgs/hoja1.svg&#x27;,
+        route: &#x27;/contratos&#x27;,
+      },
+      {
+        id: 3,
+        title: &#x27;Acciones&#x27;,
+        iconUrl: &#x27;/assets/imgs/svgs/Tool.svg&#x27;,
+        route: &#x27;/acciones&#x27;,
+      },
+      {
+        id: 4,
+        title: &#x27;Objetivos&#x27;,
+        iconUrl: &#x27;/assets/imgs/svgs/star.svg&#x27;,
+        route: &#x27;/objetivos&#x27;,
+      },
+      {
+        id: 5,
+        title: &#x27;Herramientas&#x27;,
+        iconUrl: &#x27;/assets/imgs/svgs/money.svg&#x27;,
+        route: &#x27;/herramientas&#x27;,
+      },
+      {
+        id: 6,
+        title: &#x27;Servicio al cliente&#x27;,
+        iconUrl: &#x27;/assets/imgs/svgs/talk2.svg&#x27;,
+        route: &#x27;/servicio-al-cliente&#x27;,
+      },
+    ];
+    this.selectedMenuItem &#x3D; this.menuItems[0];
+  }
+
+  /**
+   * Navega a la ruta del item del menú.
+   * @param {MenuItem} menuItem - Item del menú
+   */
+  public navigateTo(menuItem: MenuItem) {
+    this.selectedMenuItem &#x3D; menuItem;
+    this.sidenavExpanded &#x3D; false;
+    this.router.navigate([menuItem.route]);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;mat-toolbar class&#x3D;&quot;p-0&quot;&gt;
+  &lt;div class&#x3D;&quot;w100 default-row justify-space-between align-center gap-20&quot;&gt;
+    &lt;button mat-icon-button (click)&#x3D;&quot;sidenavExpanded &#x3D; !sidenavExpanded&quot;&gt;
+      &lt;mat-icon&gt;menu&lt;/mat-icon&gt;
+    &lt;/button&gt;
+    &lt;div class&#x3D;&quot;w100 default-row navbar-container&quot;&gt;
+      &lt;!-- Logo and Slogan --&gt;
+      &lt;div class&#x3D;&quot;default-row gap-10 align-center justify-start flex-1&quot;&gt;
+        &lt;img
+          class&#x3D;&quot;icon-img&quot;
+          src&#x3D;&quot;/assets/imgs/svgs/Group 123.svg&quot;
+          alt&#x3D;&quot;Logo&quot;
+          title&#x3D;&quot;Logo&quot;
+        /&gt;
+        &lt;mat-divider&gt;&lt;/mat-divider&gt;
+        &lt;h2 class&#x3D;&quot;title lt-sm-hide&quot;&gt;Plan Financiero Digital - FPX&lt;/h2&gt;
+      &lt;/div&gt;
+      &lt;!-- END Logo and Slogan --&gt;
+      &lt;!-- Links and PQRS --&gt;
+      &lt;div
+        class&#x3D;&quot;default-row gap-10 align-center justify-end flex-1 lt-md-hide&quot;
+      &gt;
+        &lt;div class&#x3D;&quot;icon-and-link&quot;&gt;
+          &lt;img
+            class&#x3D;&quot;icon-img&quot;
+            src&#x3D;&quot;/assets/imgs/svgs/Happy.svg&quot;
+            alt&#x3D;&quot;Tu Financial Planner&quot;
+            title&#x3D;&quot;Tu Financial Planner&quot;
+          /&gt;
+          &lt;a href&#x3D;&quot;#&quot;&gt;Tu Financial Planner&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;icon-and-link&quot;&gt;
+          &lt;img
+            class&#x3D;&quot;icon-img&quot;
+            src&#x3D;&quot;/assets/imgs/svgs/hand3.svg&quot;
+            alt&#x3D;&quot;Aportes&quot;
+            title&#x3D;&quot;Aportes&quot;
+          /&gt;
+          &lt;a href&#x3D;&quot;#&quot;&gt;Aportes&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;icon-with-link&quot;&gt;
+          &lt;img
+            src&#x3D;&quot;/assets/imgs/svgs/comp faq.svg&quot;
+            alt&#x3D;&quot;Preguntas frecuentes&quot;
+            title&#x3D;&quot;Preguntas frecuentes&quot;
+          /&gt;
+          &lt;a href&#x3D;&quot;#&quot;&gt;Preguntas frecuentes&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;default-row justify-center align-center gap-5&quot;&gt;
+          &lt;mat-icon class&#x3D;&quot;toggle-dark-mode&quot;&gt;dark_mode&lt;/mat-icon&gt;
+          &lt;mat-slide-toggle [formControl]&#x3D;&quot;toggleDarkTheme&quot;&gt;&lt;/mat-slide-toggle&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;!-- END Links and PQRS --&gt;
+      &lt;!-- [Responsive] Links and PQRS --&gt;
+      &lt;div
+        class&#x3D;&quot;default-row gap-10 align-center justify-end flex-1 gt-sm-hide&quot;
+      &gt;
+        &lt;button mat-icon-button [matMenuTriggerFor]&#x3D;&quot;menu&quot;&gt;
+          &lt;mat-icon&gt;more_vert&lt;/mat-icon&gt;
+        &lt;/button&gt;
+        &lt;mat-menu #menu&#x3D;&quot;matMenu&quot; class&#x3D;&quot;gt-sm-hide&quot;&gt;
+          &lt;div class&#x3D;&quot;default-column gap-10 w100 justify-start align-center&quot;&gt;
+            &lt;div class&#x3D;&quot;icon-and-link&quot;&gt;
+              &lt;img
+                src&#x3D;&quot;/assets/imgs/svgs/Happy.svg&quot;
+                alt&#x3D;&quot;Tu Financial Planner&quot;
+                title&#x3D;&quot;Tu Financial Planner&quot;
+              /&gt;
+              &lt;a href&#x3D;&quot;#&quot;&gt;Tu Financial Planner&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;icon-and-link&quot;&gt;
+              &lt;img
+                class&#x3D;&quot;icon-img&quot;
+                src&#x3D;&quot;/assets/imgs/svgs/hand3.svg&quot;
+                alt&#x3D;&quot;Aportes&quot;
+                title&#x3D;&quot;Aportes&quot;
+              /&gt;
+              &lt;a href&#x3D;&quot;#&quot;&gt;Aportes&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;icon-with-link&quot;&gt;
+              &lt;img
+                src&#x3D;&quot;/assets/imgs/svgs/comp faq.svg&quot;
+                alt&#x3D;&quot;Preguntas frecuentes&quot;
+                title&#x3D;&quot;Preguntas frecuentes&quot;
+              /&gt;
+              &lt;a href&#x3D;&quot;#&quot;&gt;Preguntas frecuentes&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;default-row justify-center align-center gap-5&quot;&gt;
+              &lt;mat-icon class&#x3D;&quot;toggle-dark-mode&quot;&gt;dark_mode&lt;/mat-icon&gt;
+              &lt;mat-slide-toggle
+                [formControl]&#x3D;&quot;toggleDarkTheme&quot;
+              &gt;&lt;/mat-slide-toggle&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/mat-menu&gt;
+      &lt;/div&gt;
+      &lt;!-- END [Responsive] Links and PQRS --&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/mat-toolbar&gt;
+&lt;mat-drawer-container autosize hasBackdrop&#x3D;&quot;false&quot; style&#x3D;&quot;min-height: 60vh&quot;&gt;
+  &lt;mat-drawer
+    #drawer
+    hasBackdrop&#x3D;&quot;false&quot;
+    mode&#x3D;&quot;over&quot;
+    [opened]&#x3D;&quot;true&quot;
+    [style.width.px]&#x3D;&quot;
+      sizeDisplay &#x3D;&#x3D;&#x3D; &#x27;phone&#x27; &amp;&amp; !sidenavExpanded
+        ? 0
+        : sidenavExpanded
+        ? 200
+        : 50
+    &quot;
+  &gt;
+    &lt;mat-nav-list class&#x3D;&quot;p-0&quot;&gt;
+      &lt;mat-list-item *ngFor&#x3D;&quot;let menuItem of menuItems&quot; class&#x3D;&quot;h100 p-0&quot;&gt;
+        &lt;a
+          class&#x3D;&quot;default-row gap-10 justify-center align-center menu-item&quot;
+          (click)&#x3D;&quot;navigateTo(menuItem)&quot;
+          [routerLink]&#x3D;&quot;[menuItem.route]&quot;
+          routerLinkActive&#x3D;&quot;selected-item&quot;
+          (mouseenter)&#x3D;&quot;sidenavExpanded &#x3D; true&quot;
+          (mouseleave)&#x3D;&quot;sidenavExpanded &#x3D; false&quot;
+        &gt;
+          &lt;img
+            class&#x3D;&quot;icon-img&quot;
+            [src]&#x3D;&quot;menuItem.iconUrl&quot;
+            [alt]&#x3D;&quot;menuItem.title&quot;
+            [title]&#x3D;&quot;menuItem.title&quot;
+          /&gt;
+          &lt;span mat-line *ngIf&#x3D;&quot;sidenavExpanded&quot;&gt;{{ menuItem.title }}&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/mat-list-item&gt;
+    &lt;/mat-nav-list&gt;
+  &lt;/mat-drawer&gt;
+  &lt;div
+    style&#x3D;&quot;position: relative&quot;
+    [style.left]&#x3D;&quot;sizeDisplay &#x3D;&#x3D;&#x3D; &#x27;phone&#x27; ? &#x27;0&#x27; : &#x27;50px&#x27;&quot;
+    [style.marginRight]&#x3D;&quot;sizeDisplay &#x3D;&#x3D;&#x3D; &#x27;phone&#x27; ? &#x27;0&#x27; : &#x27;50px&#x27;&quot;
+  &gt;
+    &lt;ng-content&gt;&lt;/ng-content&gt;
+  &lt;/div&gt;
+&lt;/mat-drawer-container&gt;
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><mat-toolbar class="p-0">  <div class="w100 default-row justify-space-between align-center gap-20">    <button mat-icon-button (click)="sidenavExpanded = !sidenavExpanded">      <mat-icon>menu</mat-icon>    </button>    <div class="w100 default-row navbar-container">      <!-- Logo and Slogan -->      <div class="default-row gap-10 align-center justify-start flex-1">        <img          class="icon-img"          src="/assets/imgs/svgs/Group 123.svg"          alt="Logo"          title="Logo"        />        <mat-divider></mat-divider>        <h2 class="title lt-sm-hide">Plan Financiero Digital - FPX</h2>      </div>      <!-- END Logo and Slogan -->      <!-- Links and PQRS -->      <div        class="default-row gap-10 align-center justify-end flex-1 lt-md-hide"      >        <div class="icon-and-link">          <img            class="icon-img"            src="/assets/imgs/svgs/Happy.svg"            alt="Tu Financial Planner"            title="Tu Financial Planner"          />          <a href="#">Tu Financial Planner</a>        </div>        <div class="icon-and-link">          <img            class="icon-img"            src="/assets/imgs/svgs/hand3.svg"            alt="Aportes"            title="Aportes"          />          <a href="#">Aportes</a>        </div>        <div class="icon-with-link">          <img            src="/assets/imgs/svgs/comp faq.svg"            alt="Preguntas frecuentes"            title="Preguntas frecuentes"          />          <a href="#">Preguntas frecuentes</a>        </div>        <div class="default-row justify-center align-center gap-5">          <mat-icon class="toggle-dark-mode">dark_mode</mat-icon>          <mat-slide-toggle [formControl]="toggleDarkTheme"></mat-slide-toggle>        </div>      </div>      <!-- END Links and PQRS -->      <!-- [Responsive] Links and PQRS -->      <div        class="default-row gap-10 align-center justify-end flex-1 gt-sm-hide"      >        <button mat-icon-button [matMenuTriggerFor]="menu">          <mat-icon>more_vert</mat-icon>        </button>        <mat-menu #menu="matMenu" class="gt-sm-hide">          <div class="default-column gap-10 w100 justify-start align-center">            <div class="icon-and-link">              <img                src="/assets/imgs/svgs/Happy.svg"                alt="Tu Financial Planner"                title="Tu Financial Planner"              />              <a href="#">Tu Financial Planner</a>            </div>            <div class="icon-and-link">              <img                class="icon-img"                src="/assets/imgs/svgs/hand3.svg"                alt="Aportes"                title="Aportes"              />              <a href="#">Aportes</a>            </div>            <div class="icon-with-link">              <img                src="/assets/imgs/svgs/comp faq.svg"                alt="Preguntas frecuentes"                title="Preguntas frecuentes"              />              <a href="#">Preguntas frecuentes</a>            </div>            <div class="default-row justify-center align-center gap-5">              <mat-icon class="toggle-dark-mode">dark_mode</mat-icon>              <mat-slide-toggle                [formControl]="toggleDarkTheme"              ></mat-slide-toggle>            </div>          </div>        </mat-menu>      </div>      <!-- END [Responsive] Links and PQRS -->    </div>  </div></mat-toolbar><mat-drawer-container autosize hasBackdrop="false" style="min-height: 60vh">  <mat-drawer    #drawer    hasBackdrop="false"    mode="over"    [opened]="true"    [style.width.px]="      sizeDisplay === \'phone\' && !sidenavExpanded        ? 0        : sidenavExpanded        ? 200        : 50    "  >    <mat-nav-list class="p-0">      <mat-list-item *ngFor="let menuItem of menuItems" class="h100 p-0">        <a          class="default-row gap-10 justify-center align-center menu-item"          (click)="navigateTo(menuItem)"          [routerLink]="[menuItem.route]"          routerLinkActive="selected-item"          (mouseenter)="sidenavExpanded = true"          (mouseleave)="sidenavExpanded = false"        >          <img            class="icon-img"            [src]="menuItem.iconUrl"            [alt]="menuItem.title"            [title]="menuItem.title"          />          <span mat-line *ngIf="sidenavExpanded">{{ menuItem.title }}</span>        </a>      </mat-list-item>    </mat-nav-list>  </mat-drawer>  <div    style="position: relative"    [style.left]="sizeDisplay === \'phone\' ? \'0\' : \'50px\'"    [style.marginRight]="sizeDisplay === \'phone\' ? \'0\' : \'50px\'"  >    <ng-content></ng-content>  </div></mat-drawer-container></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NotFound404Component', 'selector': 'app-not-found-404'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'NavbarComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'NavbarComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

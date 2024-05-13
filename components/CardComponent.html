@@ -1,0 +1,952 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>skandia documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avaoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">skandia documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  CardComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/card/card.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Componente que muestra una tarjeta con la información de un producto.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-card</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">standalone</td>
+                <td class="col-md-9"><code>true</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">imports</td>
+                <td class="col-md-9">
+                            <code>CommonModule</code>
+                            <code>FormsModule</code>
+                            <code>ReactiveFormsModule</code>
+                            <code>MatCardModule</code>
+                            <code>MatCheckboxModule</code>
+                            <code>MatDividerModule</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./card.component.html</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrl</td>
+                <td class="col-md-9"><code>./card.component.scss</code></td>
+            </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#cardClass" >cardClass</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#form" >form</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#iconUrl" >iconUrl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#productTypeClass" >productTypeClass</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#buildForm" >buildForm</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#data" >data</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#change" >change</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(formBuilder: FormBuilder)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">src/app/components/card/card.component.ts:71</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor del componente.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>formBuilder</td>
+                                                  
+                                                        <td>
+                                                                    <code>FormBuilder</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Constructor de formularios reactivos.</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section data-compodoc="block-inputs">
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="data"></a>
+                        <b>data</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Product.html" target="_self" >Product</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{} as Product</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/components/card/card.component.ts:35</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Información del producto a mostrar.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+    <section data-compodoc="block-outputs">
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="change"></a>
+                        <b>change</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;boolean&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/components/card/card.component.ts:39</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Evento que se emite cuando el checkbox de la tarjeta cambia de estado.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="buildForm"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>buildForm</b></span>
+                        <a href="#buildForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>buildForm()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="92"
+                                    class="link-to-prism">src/app/components/card/card.component.ts:92</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Construye el formulario del componente.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="82"
+                                    class="link-to-prism">src/app/components/card/card.component.ts:82</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Inicialización del componente.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cardClass"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>cardClass</b></span>
+                        <a href="#cardClass"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/components/card/card.component.ts:67</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Clase de la tarjeta.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="form"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>form</b></span>
+                        <a href="#form"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>UntypedFormGroup</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/components/card/card.component.ts:43</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Formulario del componente.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="iconUrl"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>iconUrl</b></span>
+                        <a href="#iconUrl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">src/app/components/card/card.component.ts:71</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>URL del icono.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="productTypeClass"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>productTypeClass</b></span>
+                        <a href="#productTypeClass"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>literal type</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+    ahorro: { card: &#x27;primary&#x27;, iconUrl: &#x27;/assets/imgs/svgs/Happy.svg&#x27; },
+    inversion: {
+      card: &#x27;seconadry&#x27;,
+      iconUrl: &#x27;/assets/imgs/svgs/trofeo.svg&#x27;,
+    },
+    credito: {
+      card: &#x27;tertiary&#x27;,
+      iconUrl: &#x27;/assets/imgs/svgs/hand3.svg&#x27;,
+    },
+    new: { card: &#x27;new&#x27; },
+  }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/components/card/card.component.ts:47</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Clases y URL de icono por tipo de producto.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { CommonModule } from &#x27;@angular/common&#x27;;
+import { Component, EventEmitter, Input, OnInit, Output } from &#x27;@angular/core&#x27;;
+import {
+  FormBuilder,
+  FormsModule,
+  ReactiveFormsModule,
+  UntypedFormGroup,
+} from &#x27;@angular/forms&#x27;;
+import { MatCardModule } from &#x27;@angular/material/card&#x27;;
+import { MatCheckboxModule } from &#x27;@angular/material/checkbox&#x27;;
+import { MatDividerModule } from &#x27;@angular/material/divider&#x27;;
+import { Product } from &#x27;../../interfaces/product.interface&#x27;;
+
+/**
+ * Componente que muestra una tarjeta con la información de un producto.
+ */
+@Component({
+  selector: &#x27;app-card&#x27;,
+  standalone: true,
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatDividerModule,
+  ],
+  templateUrl: &#x27;./card.component.html&#x27;,
+  styleUrl: &#x27;./card.component.scss&#x27;,
+})
+export class CardComponent implements OnInit {
+  /**
+   * Información del producto a mostrar.
+   */
+  @Input() public data: Product &#x3D; {} as Product;
+  /**
+   * Evento que se emite cuando el checkbox de la tarjeta cambia de estado.
+   */
+  @Output() public change: EventEmitter&lt;boolean&gt; &#x3D; new EventEmitter();
+  /**
+   * Formulario del componente.
+   */
+  public form!: UntypedFormGroup;
+  /**
+   * Clases y URL de icono por tipo de producto.
+   */
+  private productTypeClass: {
+    [key: string]: {
+      card: string;
+      iconUrl?: string;
+    };
+  } &#x3D; {
+    ahorro: { card: &#x27;primary&#x27;, iconUrl: &#x27;/assets/imgs/svgs/Happy.svg&#x27; },
+    inversion: {
+      card: &#x27;seconadry&#x27;,
+      iconUrl: &#x27;/assets/imgs/svgs/trofeo.svg&#x27;,
+    },
+    credito: {
+      card: &#x27;tertiary&#x27;,
+      iconUrl: &#x27;/assets/imgs/svgs/hand3.svg&#x27;,
+    },
+    new: { card: &#x27;new&#x27; },
+  };
+  /**
+   * Clase de la tarjeta.
+   */
+  public cardClass: string &#x3D; &#x27;&#x27;;
+  /**
+   * URL del icono.
+   */
+  public iconUrl: string &#x3D; &#x27;&#x27;;
+
+  /**
+   * Constructor del componente.
+   * @param {FormBuilder} formBuilder - Constructor de formularios reactivos.
+   */
+  constructor(private formBuilder: FormBuilder) {}
+
+  /**
+   * Inicialización del componente.
+   */
+  ngOnInit(): void {
+    this.buildForm();
+    this.cardClass &#x3D; this.productTypeClass[this.data.productType || &#x27;new&#x27;].card;
+    this.iconUrl &#x3D;
+      this.productTypeClass[this.data.productType || &#x27;new&#x27;].iconUrl || &#x27;&#x27;;
+  }
+
+  /**
+   * Construye el formulario del componente.
+   */
+  private buildForm(): void {
+    this.form &#x3D; this.formBuilder.group({
+      checked: [false],
+    });
+    this.form?.controls?.[&#x27;checked&#x27;]?.valueChanges.subscribe(
+      (checked: boolean) &#x3D;&gt; {
+        this.change.emit(checked);
+      }
+    );
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;mat-card [class]&#x3D;&quot;cardClass&quot;&gt;
+  &lt;!-- Product card --&gt;
+  &lt;mat-card-content *ngIf&#x3D;&quot;data?.productType !&#x3D;&#x3D; &#x27;new&#x27;&quot;&gt;
+    &lt;div class&#x3D;&quot;default-column gap-20 justify-space-between&quot;&gt;
+      &lt;div class&#x3D;&quot;w100 default-row justify-end&quot;&gt;
+        &lt;form *ngIf&#x3D;&quot;form&quot; [formGroup]&#x3D;&quot;form&quot;&gt;
+          &lt;mat-checkbox
+            formControlName&#x3D;&quot;checked&quot;
+            color&#x3D;&quot;primary&quot;
+          &gt;&lt;/mat-checkbox&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;w100 default-column gap-20&quot;&gt;
+        &lt;div class&#x3D;&quot;w100 default-column gap-10&quot;&gt;
+          &lt;h4 class&#x3D;&quot;product-name&quot;&gt;
+            {{ data.nameProduct }}
+          &lt;/h4&gt;
+          &lt;p class&#x3D;&quot;product-number&quot;&gt;#{{ data.numberProduct }}&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;mat-divider&gt;&lt;/mat-divider&gt;
+        &lt;div class&#x3D;&quot;w100 default-column gap-10&quot;&gt;
+          &lt;h4&gt;Ya cuentas con:&lt;/h4&gt;
+          &lt;p class&#x3D;&quot;product-balance&quot;&gt;
+            {{ data.balanceProduct | currency : &quot;USD&quot; : &quot;symbol&quot; : &quot;1.0-0&quot; }}
+          &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;default-column gap-5 hint-zone justifu-center align-center&quot;&gt;
+        &lt;img [src]&#x3D;&quot;iconUrl&quot; class&#x3D;&quot;icon-img&quot;/&gt;
+        &lt;p&gt;
+          {{ data.detaildProduct }}! Te recomendamos aportar
+          &lt;span class&#x3D;&quot;important-text&quot;&gt;{{
+            388000 | currency : &quot;USD&quot; : &quot;symbol&quot; : &quot;1.0-0&quot;
+          }}&lt;/span&gt;
+          mensuales para lograrlo en diciembre del 2022.
+        &lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/mat-card-content&gt;
+  &lt;!-- END Product card --&gt;
+  &lt;!-- New product card --&gt;
+  &lt;mat-card-content *ngIf&#x3D;&quot;data?.productType &#x3D;&#x3D;&#x3D; &#x27;new&#x27;&quot; class&#x3D;&quot;new-product&quot;&gt;
+    &lt;div class&#x3D;&quot;new-card default-column gap-20 justify-space-between&quot;&gt;
+      &lt;div class&#x3D;&quot;default-row justify-end&quot;&gt;
+        &lt;div class&#x3D;&quot;recommended-label&quot;&gt;Producto recomendado&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;h4&gt;
+        ¡Conoce nuevos productos de ahorro e inversión para
+        &lt;span class&#x3D;&quot;important-text&quot;&gt;Conocer sobrino&lt;/span&gt;!
+      &lt;/h4&gt;
+      &lt;div&gt;
+        &lt;button class&#x3D;&quot;primary-button&quot;&gt;Explora ahora&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/mat-card-content&gt;
+  &lt;!-- END New product card --&gt;
+&lt;/mat-card&gt;
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><mat-card [class]="cardClass">  <!-- Product card -->  <mat-card-content *ngIf="data?.productType !== \'new\'">    <div class="default-column gap-20 justify-space-between">      <div class="w100 default-row justify-end">        <form *ngIf="form" [formGroup]="form">          <mat-checkbox            formControlName="checked"            color="primary"          ></mat-checkbox>        </form>      </div>      <div class="w100 default-column gap-20">        <div class="w100 default-column gap-10">          <h4 class="product-name">            {{ data.nameProduct }}          </h4>          <p class="product-number">#{{ data.numberProduct }}</p>        </div>        <mat-divider></mat-divider>        <div class="w100 default-column gap-10">          <h4>Ya cuentas con:</h4>          <p class="product-balance">            {{ data.balanceProduct | currency : "USD" : "symbol" : "1.0-0" }}          </p>        </div>      </div>      <div class="default-column gap-5 hint-zone justifu-center align-center">        <img [src]="iconUrl" class="icon-img"/>        <p>          {{ data.detaildProduct }}! Te recomendamos aportar          <span class="important-text">{{            388000 | currency : "USD" : "symbol" : "1.0-0"          }}</span>          mensuales para lograrlo en diciembre del 2022.        </p>      </div>    </div>  </mat-card-content>  <!-- END Product card -->  <!-- New product card -->  <mat-card-content *ngIf="data?.productType === \'new\'" class="new-product">    <div class="new-card default-column gap-20 justify-space-between">      <div class="default-row justify-end">        <div class="recommended-label">Producto recomendado</div>      </div>      <h4>        ¡Conoce nuevos productos de ahorro e inversión para        <span class="important-text">Conocer sobrino</span>!      </h4>      <div>        <button class="primary-button">Explora ahora</button>      </div>    </div>  </mat-card-content>  <!-- END New product card --></mat-card></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NotFound404Component', 'selector': 'app-not-found-404'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'CardComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'CardComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
